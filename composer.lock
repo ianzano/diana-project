@@ -1,0 +1,98 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "ede0b12557057356b9f74d547f7dbf87",
+    "packages": [
+        {
+            "name": "diana/framework",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../framework",
+                "reference": "2c179473728dec2be6ac18ee2c30e553306ccf79"
+            },
+            "require": {
+                "php": ">=8.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Diana\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Antonio Ianzano",
+                    "email": "ianzanoan@gmail.com"
+                }
+            ],
+            "description": "a php framework aiming for simplicity and clean syntax",
+            "keywords": [
+                "diana",
+                "framework",
+                "php"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "diana/package",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../package",
+                "reference": "a7a296ce6fdcfbba0b71f3ae5e506ce8d881be14"
+            },
+            "require": {
+                "php": ">=8.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Antonio Ianzano",
+                    "email": "ianzanoan@gmail.com"
+                }
+            ],
+            "description": "a diana package",
+            "keywords": [
+                "diana",
+                "framework",
+                "php"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "diana/framework": 20,
+        "diana/package": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=8.3"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "2.6.0"
+}

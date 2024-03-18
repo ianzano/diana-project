@@ -1,0 +1,45 @@
+{
+    "name": "diana/project",
+    "version": "dev-master",
+    "description": "a brand new diana project",
+    "keywords": [
+        "diana",
+        "framework",
+        "php"
+    ],
+    "type": "project",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Antonio Ianzano",
+            "email": "ianzanoan@gmail.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../framework",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "../package",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
+    "require": {
+        "php": ">=8.3",
+        "diana/framework": "dev-master",
+        "diana/package": "dev-master"
+    }
+}
