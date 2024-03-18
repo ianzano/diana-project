@@ -17,7 +17,7 @@ use Diana\Runtime\Application;
  * a simple yet convenient class loader for our project.
  * It will handle all of the namespacing for us.
  */
-require_once __DIR__ . '/../vendor/autoload.php';
+$autoLoader = require_once __DIR__ . '/../vendor/autoload.php';
 
 /**
  * Crafting the project
@@ -27,5 +27,5 @@ require_once __DIR__ . '/../vendor/autoload.php';
  * all by itself so we can start developing straight away.
  */
 
-Application::make(dirname(__DIR__))
+Application::make(dirname(__DIR__), $autoLoader)
     ->handleRequest(Request::mock());
