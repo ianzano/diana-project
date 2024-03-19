@@ -1,12 +1,10 @@
 <?php
 use Controllers\AppController;
-use Diana\Interfaces\Runnable;
 use Diana\Routing\RoutingPackage;
 use Diana\Runtime\Application;
 use Diana\Runtime\Package;
-use Diana\Support\Debug;
 
-class AppPackage extends Package implements Runnable
+class AppPackage extends Package
 {
     public function register(Application $app)
     {
