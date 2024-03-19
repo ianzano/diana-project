@@ -1,13 +1,18 @@
 <?php
-use Diana\Drivers\Interfaces\RoutingDriver;
-use Diana\Drivers\RoutingManager;
+use Controllers\AppController;
+use Diana\Routing\RoutingDriver;
+use Diana\Routing\RoutingInterface;
+use Diana\Routing\RoutingManager;
 
 return [
     'packages' => [
         SamplePackage::class
     ],
+    'controllers' => [
+        AppController::class
+    ],
     'drivers' => [
-        RoutingDriver::class => RoutingManager::class
+        RoutingInterface::class => RoutingDriver::class
         // ConfigDriver::class => ConfigDriverManager::class
     ]
 ];
