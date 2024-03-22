@@ -12,7 +12,7 @@
             "dist": {
                 "type": "path",
                 "url": "../framework",
-                "reference": "a7d087c7840b508b01056ec0778c38fcf4085f8f"
+                "reference": "5d76a3138b8e2316b8b91e7ae5fd2c7238c8d662"
             },
             "require": {
                 "filp/whoops": "^2.15",
@@ -21,7 +21,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Diana\\": "src/"
+                    "Diana\\": "src/Diana/"
                 }
             },
             "license": [
@@ -50,7 +50,7 @@
             "dist": {
                 "type": "path",
                 "url": "../package",
-                "reference": "9c9239fe19ee71cb6ffcdcecbe4a29484fcfc8f1"
+                "reference": "a98ce0a91ef283de94d64327c0f24647e2949130"
             },
             "require": {
                 "php": ">=8.3"
