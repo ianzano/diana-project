@@ -1,2 +1,8 @@
 /vendor
-logs
+/node_modules
+
+logs/*
+
+dist/*
+!dist/.htaccess
+!dist/index.php

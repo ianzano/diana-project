@@ -17,6 +17,8 @@ class AppPackage extends Package
 
         $this->app->registerPackage(RoutingPackage::class);
         $this->app->registerPackage(SamplePackage::class);
+
+        $this->app->registerController(AppController::class);
     }
 
     /** All packages have been initialized */
