@@ -1,5 +1,6 @@
 <?php
 
+use Diana\Rendering\RenderingPackage;
 use Diana\Runtime\Kernel;
 use Diana\Routing\RoutingPackage;
 use Diana\Runtime\Application;
@@ -16,6 +17,7 @@ class AppPackage extends Package
         $this->app->singleton('kernel', Kernel::class);
 
         $this->app->registerPackage(RoutingPackage::class);
+        $this->app->registerPackage(RenderingPackage::class);
         $this->app->registerPackage(SamplePackage::class);
 
         $this->app->registerController(AppController::class);

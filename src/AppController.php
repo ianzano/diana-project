@@ -1,9 +1,21 @@
 <?php
+use Diana\Rendering\Renderer;
 use Diana\Routing\Attributes\Get;
+use Diana\Support\Debug;
 use Diana\Support\View;
 
 class AppController
 {
+    #[Get("/twig")]
+    public function twig(Renderer $renderer)
+    {
+        $render = $renderer->render("index");
+
+        foreach (array_diff(scandir(App::getPath() . "/cache/blade"), [".", ".."]) as $file)
+            unlink(App::getPath() . "/cache/blade/" . $file);
+
+        return $render;
+    }
 
     #[Get("/")]
     public function main()
@@ -28,7 +40,7 @@ class AppController
         // }
 
 
-        $env = "dev";
+        $env = "prod";
         $entry = "main.jsx";
 
         if ($env == "dev") {
