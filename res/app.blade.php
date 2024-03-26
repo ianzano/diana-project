@@ -10,7 +10,10 @@
 
 <body>
     <div id="root"></div>
-    <x-alert-component />
+    <x-alert-component type="test" message="$message">
+        asdas
+        <x-slot name="test">test</x-slot>
+    </x-alert-component>
     @yield("test")
     @include(App::getPath() . "/res/inc.blade.php")
     @vite("main.jsx")

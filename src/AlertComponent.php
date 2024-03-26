@@ -5,17 +5,15 @@ use Diana\Rendering\Renderer;
 
 class AlertComponent extends Component
 {
-    // public $type;
-    // public $message;
-
-    public function __construct($type, $message)
+    public function __construct(private Renderer $renderer, public $type, public $message)
     {
-        // $this->type = $type;
-        // $this->message = $message;
     }
 
     public function render()
     {
-        return App::resolve(Renderer::class)->render(App::getPath() . "/res/alert.blade.php");
+        return $this->renderer->render(App::getPath() . "/res/alert.blade.php", [
+            "type" => $this->type,
+            "message" => $this->message
+        ]);
     }
 }
