@@ -1,8 +1,8 @@
 /vendor
 /node_modules
 
+cache/*
 logs/*
-
 dist/*
 !dist/.htaccess
 !dist/index.php

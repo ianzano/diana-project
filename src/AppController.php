@@ -1,15 +1,16 @@
 <?php
 use Diana\Rendering\Renderer;
 use Diana\Routing\Attributes\Get;
+use Diana\Runtime\Application;
 use Diana\Support\Debug;
 use Diana\Support\View;
 
 class AppController
 {
     #[Get("/twig")]
-    public function twig(Renderer $renderer)
+    public function twig(Renderer $renderer, Application $app)
     {
-        $render = $renderer->render("index");
+        $render = $renderer->render($app->getPath() . "/res/index.blade.php");
 
         foreach (array_diff(scandir(App::getPath() . "/cache/blade"), [".", ".."]) as $file)
             unlink(App::getPath() . "/cache/blade/" . $file);
