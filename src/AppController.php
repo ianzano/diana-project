@@ -12,9 +12,6 @@ class AppController
     {
         $render = $renderer->render($app->getPath() . "/res/index.blade.php");
 
-        foreach (array_diff(scandir(App::getPath() . "/cache/blade"), [".", ".."]) as $file)
-            unlink(App::getPath() . "/cache/blade/" . $file);
-
         return $render;
     }
 
@@ -58,17 +55,17 @@ class AppController
         } else {
             $content = file_get_contents(App::getPath() . '/dist/.vite/manifest.json');
             $manifest = json_decode($content, true);
-            $script = isset ($manifest[$entry]) ? "<script type=\"module\" src=\"" . $manifest[$entry]['file'] . "\"></script>" : "";
+            $script = isset($manifest[$entry]) ? "<script type=\"module\" src=\"" . $manifest[$entry]['file'] . "\"></script>" : "";
 
             $res = '';
-            if (!empty ($manifest[$entry]['imports']))
+            if (!empty($manifest[$entry]['imports']))
                 foreach ($manifest[$entry]['imports'] as $imports)
                     $res .= '<link rel="modulepreload" href="/' . $manifest[$imports]['file'] . '">';
 
             $script .= "\n" . $res;
 
             $tags = '';
-            if (!empty ($manifest[$entry]['css']))
+            if (!empty($manifest[$entry]['css']))
                 foreach ($manifest[$entry]['css'] as $file)
                     $tags .= '<link rel="stylesheet" href="/' . $file . '">';
 

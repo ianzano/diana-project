@@ -11,9 +11,6 @@ class AlertComponent extends Component
 
     public function render()
     {
-        return $this->renderer->render(App::getPath() . "/res/alert.blade.php", [
-            "type" => $this->type,
-            "message" => $this->message
-        ]);
+        return $this->renderer->make(App::getPath() . "/res/alert.blade.php");
     }
 }
